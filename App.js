@@ -73,7 +73,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <MyStack />
-      <Drawer.Navigator>
+      {/* <Drawer.Navigator>
         <Drawer.Screen
           name="HomePage"
           component={Home}
@@ -92,7 +92,7 @@ export default function App() {
           name="ContactPage"
           component={Contact}
         />
-      </Drawer.Navigator>
+      </Drawer.Navigator> */}
     </NavigationContainer>
   )
 }

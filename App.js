@@ -20,6 +20,31 @@ import {createDrawerNavigator} from '@react-navigation/drawer'
 const Drawer = createDrawerNavigator()
 const Stack = createStackNavigator()
 
+function Drawer() {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen
+        name="Home"
+        component={Home}
+        options={{
+          title: 'My Home Screen',
+          headerStyle: {
+            backgroundColor: '#f4511e',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      />
+      <Drawer.Screen
+        name="Contact"
+        component={Contact}
+      />
+    </Drawer.Navigator>
+  )
+}
+
 function MyStack() {
   return (
     <Stack.Navigator
@@ -65,6 +90,10 @@ function MyStack() {
         component={Header}
         options={{title: 'Header'}}
       />
+      <Stack.Screen
+        name="Drawer"
+        component={Drawer}
+      />
     </Stack.Navigator>
   )
 }
@@ -73,26 +102,6 @@ export default function App() {
   return (
     <NavigationContainer>
       <MyStack />
-      {/* <Drawer.Navigator>
-        <Drawer.Screen
-          name="HomePage"
-          component={Home}
-          options={{
-            title: 'My Home Screen',
-            headerStyle: {
-              backgroundColor: '#f4511e',
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
-          }}
-        />
-        <Drawer.Screen
-          name="ContactPage"
-          component={Contact}
-        />
-      </Drawer.Navigator> */}
     </NavigationContainer>
   )
 }

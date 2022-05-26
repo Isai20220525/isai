@@ -20,7 +20,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer'
 const Drawer = createDrawerNavigator()
 const Stack = createStackNavigator()
 
-function Drawer() {
+function DrawerNav() {
   return (
     <Drawer.Navigator>
       <Drawer.Screen
@@ -91,8 +91,8 @@ function MyStack() {
         options={{title: 'Header'}}
       />
       <Stack.Screen
-        name="Drawer"
-        component={Drawer}
+        name="DrawerNav"
+        component={DrawerNav}
       />
     </Stack.Navigator>
   )

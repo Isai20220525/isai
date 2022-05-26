@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 function Photo() {
     return (
       <View style={styles.container}>
-        <Image source={require('..\\assets\\logo.jpg')} style={styles.Image} />
+        <Image source={require('../assets/logo.jpg')} style={styles.Image} />
         <StatusBar style="auto" />
       </View>
     );

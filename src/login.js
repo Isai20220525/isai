@@ -28,9 +28,9 @@ export default class Login extends Component {
       this.state.password === ''
     ) {
       Alert.alert('Enter details to signin!')
-      this.props.navigation.navigate('Dashboard')
+      this.props.navigation.navigate('Home')
     } else {
-      this.props.navigation.navigate('Dashboard')
+      this.props.navigation.navigate('Home')
     }
   }
   render() {

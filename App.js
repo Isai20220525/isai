@@ -26,20 +26,17 @@ function DrawerNav() {
       <Drawer.Screen
         name="Home"
         component={Home}
-        options={{
-          title: 'My Home Screen',
-          headerStyle: {
-            backgroundColor: '#f4511e',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-        }}
+        options={{title: 'Home'}}
       />
       <Drawer.Screen
-        name="Contact"
-        component={Contact}
+        name="Photo"
+        component={Photo}
+        options={{title: 'Photo'}}
+      />
+      <Drawer.Screen
+        name="MyStack"
+        component={MyStack}
+        options={{title: 'Menu'}}
       />
     </Drawer.Navigator>
   )
@@ -101,7 +98,8 @@ function MyStack() {
 export default function App() {
   return (
     <NavigationContainer>
-      <MyStack />
+      {/* <MyStack /> */}
+      <DrawerNav />
     </NavigationContainer>
   )
 }
